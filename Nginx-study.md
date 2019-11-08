@@ -1,4 +1,4 @@
-> 출처 : [Nginx HTTP Server(한국어판)](https://book.naver.com/bookdb/book_detail.nhn?bid=6740233)
+> 출처 : [Nginx HTTP Server(한국어판)](https://book.naver.com/bookdb/book_detail.nhn?bid=6740233), [Nginx HTTP Server 3rd edition](https://github.com/swn73/books/blob/master/Packt.Nginx.HTTP.Server.3rd.Edition.pdf)
 
 ## Nginx 등장 배경
 >성능을 결정하는데 여러 요소가 있지만 크게 웹 서버, 웹 클라이언트, 통신망의 세 가지를 생각할 수 있다.  
@@ -85,5 +85,5 @@ _from 들어가며_
     $ ./configure --user=www-data \
     --group=www-data \
     --with-http_ssl_module \
-    --with-http_realip-module
+    --with-http_realip_module
     ```
