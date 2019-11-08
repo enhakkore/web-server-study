@@ -64,7 +64,7 @@ _from 들어가며_
   `./configure` `make` `make install` 세 가지 명령어로 컴파일하고 설치할 수 있다.  
 
   - 환경 설정  
-  `./configure` 명령어 뒤에 지시어를 추가하여 환경 설정이 가능하다.
+  `./configure` 명령어 뒤에 옵션을 추가하여 환경 설정이 가능하다.
 
     `--prefix=` : 모든 환경 설정 지시어들의 기반 경로를 설정  
     `--conf-path=` : 환경 설정 파일의 경로  
@@ -83,7 +83,7 @@ _from 들어가며_
     - `./configure` 사용의 예  
     ```
     $ ./configure --user=www-data \
-    --group=www-date \
+    --group=www-data \
     --with-http_ssl_module \
     --with-http_realip-module
     ```
