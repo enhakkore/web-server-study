@@ -22,7 +22,7 @@ public class ServletProcessor1 {
             File classPath = new File(Constants.WEB_ROOT);
 
             String repository = (new URL("file", null, classPath.getCanonicalPath() + File.separator)).toString();
-
+            System.out.println("repository => "+repository);
             urls[0] = new URL(null, repository, streamHandler);
             loader = new URLClassLoader(urls);
         }
@@ -33,9 +33,11 @@ public class ServletProcessor1 {
         Class myClass = null;
 
         try{
+            System.out.println("찾고자하는 서블릿 이름 : "+servletName);
             myClass = loader.loadClass(servletName);
         }
         catch (ClassNotFoundException e) {
+            e.printStackTrace();
             System.out.println(e.toString());
         }
 

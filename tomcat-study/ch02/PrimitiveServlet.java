@@ -1,13 +1,10 @@
 package com.practice.ch02;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class PrimitiveServlet {
+public class PrimitiveServlet implements Servlet {
 
     public void init(ServletConfig config) throws ServletException {
         System.out.println("init");

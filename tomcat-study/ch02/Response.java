@@ -27,6 +27,9 @@ public class Response implements ServletResponse {
             File file = new File(Constants.WEB_ROOT, request.getUri());
             fis = new FileInputStream(file);
 
+            String tmp = "HTTP/1.1 200 OK\r\n"+"\r\n";
+            output.write(tmp.getBytes());
+
             int ch = fis.read(bytes, 0, BUFFER_SIZE);
             while(ch != -1) {
                 output.write(bytes, 0, ch);
@@ -75,6 +78,11 @@ public class Response implements ServletResponse {
 
     @Override
     public void setContentLength(int i) {
+
+    }
+
+    @Override
+    public void setContentLengthLong(long l) {
 
     }
 

@@ -52,7 +52,7 @@ public class Request implements ServletRequest {
             request.append((char)buffer[j]);
         }
 
-        System.out.print(request.toString());
+        System.out.print("<<<<< HTTP request >>>>>\n"+request.toString());
         uri = parseUri(request.toString());
     }
 
@@ -77,6 +77,11 @@ public class Request implements ServletRequest {
     }
 
     public int getContentLength(){
+        return 0;
+    }
+
+    @Override
+    public long getContentLengthLong() {
         return 0;
     }
 

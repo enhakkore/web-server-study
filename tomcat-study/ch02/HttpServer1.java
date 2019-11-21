@@ -44,12 +44,14 @@ public class HttpServer1 {
 
                 Response response = new Response(output);
                 response.setRequest(request);
-                System.out.println(request.getUri());
+                System.out.println("요청받은 URL -> "+request.getUri());
                 if(request.getUri().startsWith("/servlet")) {
+                    System.out.println("--> servlet 처리를 시작합니다.");
                     ServletProcessor1 processor = new ServletProcessor1();
                     processor.process(request, response);
                 }
                 else {
+                    System.out.println("--> 정적 자원 처리를 시작합니다.");
                     StaticResourceProcessor processor = new StaticResourceProcessor();
                     processor.process(request, response);
                 }
