@@ -1,4 +1,4 @@
-package com.practice.ch02;
+package com.practice.ch02.first;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;

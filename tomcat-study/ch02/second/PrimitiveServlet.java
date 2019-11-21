@@ -1,4 +1,4 @@
-package com.practice.ch02;
+package com.practice.ch02.second;
 
 import javax.servlet.*;
 import java.io.IOException;

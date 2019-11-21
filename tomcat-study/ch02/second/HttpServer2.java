@@ -1,4 +1,4 @@
-package com.practice.ch02;
+package com.practice.ch02.second;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,13 +7,13 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer1 {
+public class HttpServer2 {
     private static final String SHUTDOWN_COMMAND = "/SHUTDOWN";
 
     private boolean shutdown = false;
 
     public static void main(String[] args){
-        HttpServer1 server = new HttpServer1();
+        HttpServer2 server = new HttpServer2();
         server.await();
     }
 
@@ -47,7 +47,7 @@ public class HttpServer1 {
                 System.out.println("요청받은 URL -> "+request.getUri());
                 if(request.getUri().startsWith("/servlet")) {
                     System.out.println("--> servlet 처리를 시작합니다.");
-                    ServletProcessor1 processor = new ServletProcessor1();
+                    ServletProcessor2 processor = new ServletProcessor2();
                     processor.process(request, response);
                 }
                 else {
